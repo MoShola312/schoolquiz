@@ -1,0 +1,29 @@
+body {
+  background-image: url("chalkboard.png");
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  width: 20%;
+
+}
+.container{
+  margin-top: 50%;
+  /* margin-left: 25%; */
+  position: relative;
+  left: 150px;
+}
+span{
+  position: relative;
+  left: 7px;
+  font-size: 30px;
+  padding-bottom: 30px;
+  color: white;
+}
+button{
+  position: relative;
+  left: 30px;
+}
+
+#questionTitle {
+  color: white;
+
+}

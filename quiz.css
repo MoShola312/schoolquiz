@@ -4,6 +4,7 @@ body {
   /* background-size: cover; */
   width: 20%;
 
+
 }
 .container{
   margin-top: 50%;
@@ -13,17 +14,28 @@ body {
 }
 span{
   position: relative;
-  left: 7px;
-  font-size: 30px;
+  left: 10px;
+
+  font-size: 25px;
   padding-bottom: 30px;
   color: white;
+font-family: 'Caveat Brush' "serif";
 }
 button{
   position: relative;
   left: 30px;
+  top: 25px;
 }
 
 #questionTitle {
   color: white;
+}
+#yourScore{
+  margin-top: 45px;
+  color: white;
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
 
 }

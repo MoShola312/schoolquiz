@@ -58,7 +58,7 @@ for(var i=0; i<input.length; i++){
    } else{
      //if wrong tell them they are wrong
      // alert("wrong")
-     document.querySelector("#yourScore").innerHTML=("Ewwk! your score is " + score)
+     document.querySelector("#yourScore").innerHTML=("Ewwk! your score is still " + score)
    }
    currentQuestion++;
    input[i].checked = false;

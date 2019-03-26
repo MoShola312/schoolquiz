@@ -31,6 +31,7 @@ var test = [
 ]
 var currentQuestion = 0;
 var score = 0;
+var missed = 0;
 var button = document.querySelector("#button")
 var reset = document.querySelector("#reset");
 var input = document.getElementsByName('t');
@@ -50,23 +51,28 @@ for(var i=0; i<input.length; i++){
       //get the value of the selected button
       //compare the the value with the answer array
     if(input[i].value == test[currentQuestion].correct){
-     // alert("correct")
+
      //increment score
-     score++
-     document.querySelector("#yourScore").innerHTML=("Good job! your score is " + score)
+     score++;
+     document.querySelector("#yourScore").innerHTML=("Good job! your score is " + score )
    } else{
      //if wrong tell them they are wrong
-     // alert("wrong")
-     document.querySelector("#yourScore").innerHTML=("Ewwk! your score is still " + score)
+     missed++;
+     document.querySelector("#yourScore").innerHTML=("Ewwk! your score is still " + score + "." + "<br>" +
+   "Wrong: " + missed)
+
    }
+   //goes to the next question
    currentQuestion++;
+   //unchecks the radio button
    input[i].checked = false;
 
    //ENDS THE GAME
-   //if a question is added to the array, increase the number to 4
+   //note: if a question is added to the array, increase the number to 4
    if(currentQuestion > 3){
      button.style.visibility = "hidden";
-     document.querySelector("#yourScore").innerHTML=("Game over! Your total is " + score);
+     document.querySelector("#yourScore").innerHTML=("Game over! Your total is " + score + "." + " <br> " +
+                                                    "You missed " + missed + '.');
      reset.style.visibility = "visible";
      return;
    }
@@ -80,7 +86,7 @@ console.log("currentQuestion " + currentQuestion)
 //load the first question
 loadQuestion(currentQuestion);
 
-//loads the question
+//loads the question and options
 function loadQuestion(currentQuestion){
   document.querySelector("#questionTitle").textContent = test[currentQuestion].question
   document.querySelector("#Q1").setAttribute("value", test[currentQuestion].option1)
@@ -95,6 +101,7 @@ function loadQuestion(currentQuestion){
 reset.addEventListener("click", function(){
   currentQuestion = 0;
   score = 0;
+  missed = 0;
   document.querySelector("#yourScore").innerHTML=(" ");
   loadQuestion(currentQuestion);
   reset.style.visibility = "hidden";

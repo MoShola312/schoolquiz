@@ -1,41 +1,56 @@
 body {
   background-image: url("chalkboard.png");
   background-repeat: no-repeat;
-  /* background-size: cover; */
-  width: 20%;
-
-
+  background-size: 100%;
+  /* width: 20%; */
 }
 .container{
-  margin-top: 50%;
+  margin-top: 10%;
   /* margin-left: 25%; */
   position: relative;
-  left: 150px;
+  left: 25px;
 }
-span{
+span {
   position: relative;
   left: 10px;
 
-  font-size: 25px;
-  padding-bottom: 30px;
+  font-size:3.5vw;
+  padding-bottom: 20px;
   color: white;
-font-family: 'Caveat Brush' "serif";
 }
+
+h5 {
+  font-size: 3.5vw
+}
+
 button{
   position: relative;
   left: 30px;
-  top: 25px;
+  top: 8px;
+  size: 20%;
 }
 
 #questionTitle {
   color: white;
 }
 #yourScore{
-  margin-top: 45px;
+  margin-top: 25px;
   color: white;
-  font-size: 30px;
-  font-family: 'Lato', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Roboto', sans-serif;
+  font-size: 3.5vw
+}
+/* .left, .right {
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+} */
 
+/* .main {
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+} */
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
 }

@@ -1,4 +1,4 @@
-# schoolquiz
+# School quiz
 This is a four-question quiz created with JavaScript. The correct and incorrect total will update after each question.
 
 ## Your purpose or reason for doing this project
